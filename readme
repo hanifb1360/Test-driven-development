@@ -4,3 +4,5 @@ To visualize the test add following line of code to package.json and then in tes
 so it should be like this:
 "test": "react-scripts test --env=jsdom --verbose",
 
+then install https://spaceship-prompt.sh/ with homebrew
+
