@@ -1,1 +1,6 @@
+To visualize the test add following line of code to package.json and then in test:
+--env=jsdom --verbose
+
+so it should be like this:
+"test": "react-scripts test --env=jsdom --verbose",
 
