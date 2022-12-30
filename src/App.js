@@ -1,10 +1,11 @@
 import './App.css';
 import Navbar from './components/navbar/Navbar';
+import Register from './components/user/register/Register';
 
 function App() {
   return (
     <div className="App">
-      <Navbar data-testid="navbarTag" />
+      <Register />
     </div>
   );
 }
