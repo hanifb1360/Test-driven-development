@@ -6,3 +6,13 @@ so it should be like this:
 
 then install https://spaceship-prompt.sh/ with homebrew
 
+
+install json-server from npm package:
+sudo npm install -g json-server
+Yoy can either run this line directly in terminal or add it to the package.json file using 
+"server": "json-server --watch db.json --port 3010",
+
+to watch json:
+json-server --watch db.json --port 3010
+
+to have a good visual experience of json files add JSON Viewer pro to google chrome
