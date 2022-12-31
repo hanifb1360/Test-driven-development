@@ -74,6 +74,9 @@ describe('register user component', () => {
       //act
       userEvent.type(passwordInput, 'password');
       userEvent.type(confirmPasswordInput, 'password');
+      userEvent.click(registerButton);
+
+      //assert
 
       //assert
       expect(registerButton).toBeEnabled();

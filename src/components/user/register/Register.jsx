@@ -53,7 +53,9 @@ export default function Register() {
           />
         </div>
         <div className="form-control">
-          <button disabled={buttonDisabled}>Register</button>
+          <button className="btn btn-primary" disabled={buttonDisabled}>
+            Register
+          </button>
         </div>
       </form>
     </section>

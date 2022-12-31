@@ -1,34 +1,41 @@
 import { render, screen } from '@testing-library/react';
 import Login from './Login';
+import userEvent from '@testing-library/user-event';
 
 describe('login user component', () => {
-  describe('login user page', () => {
-    test('has a header saying login User', () => {
-      render(<Login />);
-      const titleText = screen.getByRole('heading', {
-        name: 'Login',
-      });
-      expect(titleText).toBeInTheDocument();
-    });
+  const setup = () => render(<Login />);
 
-    test('has an username input', () => {
-      render(<Login />);
-      const userInput = screen.getByLabelText('Username');
-      expect(userInput).toBeInTheDocument();
-    });
+  test('should have a username input', () => {
+    setup();
+    const userNameInput = screen.getByLabelText('Username/Email');
 
-    test('has an password input', () => {
-      render(<Login />);
+    expect(userNameInput).toBeInTheDocument();
+  });
+
+  test('should have a password input', () => {
+    setup();
+    const passwordInput = screen.getByLabelText('Password');
+
+    expect(passwordInput).toBeInTheDocument();
+    expect(passwordInput.type).toBe('password');
+  });
+
+  test('should have a login button', () => {
+    setup();
+    const loginButton = screen.getByRole('button', { name: 'Login' });
+    expect(loginButton).toBeInTheDocument();
+  });
+
+  describe('Form interaction', () => {
+    test('login button should be enabled when username and password have values', () => {
+      setup();
+      const usernameInput = screen.getByLabelText('Username/Email');
       const passwordInput = screen.getByLabelText('Password');
-      expect(passwordInput).toBeInTheDocument();
-      expect(passwordInput.type).toBe('password');
-    });
 
-    test('should have a login button', () => {
-      render(<Login />);
-      const loginButton = screen.getByRole('button', { name: 'Login' });
-      // expect(loginButton).toBeInTheDocument();
-      expect(loginButton).toBeDisabled();
+      userEvent.type(usernameInput, 'Michael');
+      userEvent.type(passwordInput, 'password');
+      const loginButton = screen.getByRole('button');
+      expect(loginButton).toBeEnabled();
     });
   });
 });
