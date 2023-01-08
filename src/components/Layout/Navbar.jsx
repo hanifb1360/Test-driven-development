@@ -2,17 +2,17 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h1 className="logo">Westcoast Cars</h1>
+    <nav className='navbar'>
+      <h1 className='logo'>Westcoast Cars</h1>
       <ul>
         <li>
-          <Link to="/">Vehicles</Link>
+          <Link to='/'>Vehicles</Link>
         </li>
         <li>
-          <Link to="/users">Users</Link>
+          <Link to='/users'>Users</Link>
         </li>
         <li>
-          <Link to="/adduser">Add users</Link>
+          <Link to='/adduser'>Add users</Link>
         </li>
       </ul>
     </nav>

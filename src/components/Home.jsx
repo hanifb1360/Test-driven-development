@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export default function Home() {
-  const [buttonText, setButtonText] = useState('Logga in');
+const Home = () => {
+  const [buttonText, setButtonText] = useState('Logga In');
   const [buttonColor, setButtonColor] = useState('green');
 
   const toggle = () => {
@@ -11,9 +11,17 @@ export default function Home() {
 
   return (
     <div>
-      <button onClick={toggle} style={{ backgroundColor: buttonColor }}>
+      <button
+        onClick={toggle}
+        style={{ backgroundColor: buttonColor }}
+      >
         {buttonText}
       </button>
+      <ul>
+        <li>Test</li>
+      </ul>
     </div>
   );
-}
+};
+
+export default Home;

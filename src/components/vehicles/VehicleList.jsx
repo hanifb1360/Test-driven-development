@@ -8,12 +8,13 @@ const VehicleList = () => {
       .then((response) => response.json())
       .then((data) => setVehicles(data));
   }, []);
+
   return (
-    <section className="container">
-      <h1 className="page-title">Vehicles in Storage</h1>
+    <section data-testid="vehicle-list-component" className="container">
+      <h1 className="page-title">Vehicles in storage</h1>
       <ul>
         {vehicles.map((vehicle) => (
-          <li key={vehicle.id}>
+          <li key={vehicle.vehicleId} data-testid="vehicle-list-item">
             {vehicle.manufacturer} - {vehicle.model}
           </li>
         ))}

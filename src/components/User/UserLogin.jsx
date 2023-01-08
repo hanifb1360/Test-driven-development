@@ -27,33 +27,33 @@ const UserLogin = () => {
   };
 
   return (
-    <section className="container">
-      <h1 className="page-title">Register user</h1>
+    <section className='container'>
+      <h1 className='page-title'>Register user</h1>
       <form>
-        <div className="form-control">
-          <label htmlFor="username">Username/Email</label>
+        <div className='form-control'>
+          <label htmlFor='username'>Username/Email</label>
           <input
-            id="username"
-            placeholder="username"
+            id='username'
+            placeholder='username'
             value={username}
             onChange={onChangeUsernameHandler}
           />
         </div>
-        <div className="form-control">
-          <label htmlFor="password">Password</label>
+        <div className='form-control'>
+          <label htmlFor='password'>Password</label>
           <input
-            type="password"
-            id="password"
-            placeholder="password"
+            type='password'
+            id='password'
+            placeholder='password'
             value={password}
             onChange={onChangePasswordHandler}
           />
         </div>
-        <div className="form-control">
+        <div className='form-control'>
           <input
-            className="btn btn-primary"
-            type="button"
-            value="Login"
+            className='btn btn-primary'
+            type='button'
+            value='Login'
             disabled={buttonDisabled}
           />
         </div>
