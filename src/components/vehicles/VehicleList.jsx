@@ -10,11 +10,14 @@ const VehicleList = () => {
   }, []);
 
   return (
-    <section data-testid="vehicle-list-component" className="container">
-      <h1 className="page-title">Vehicles in storage</h1>
+    <section
+      data-testid='vehicle-list-component'
+      className='container'
+    >
+      <h1 className='page-title'>Vehicles in storage</h1>
       <ul>
         {vehicles.map((vehicle) => (
-          <li key={vehicle.vehicleId} data-testid="vehicle-list-item">
+          <li key={vehicle.vehicleId}>
             {vehicle.manufacturer} - {vehicle.model}
           </li>
         ))}

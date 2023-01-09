@@ -22,7 +22,7 @@ describe('UserList component', () => {
       // Arrange
       setup();
 
-      const users = await screen.ffindAllByTestId('user-list-item');
+      const users = await screen.findAllByRole('listitem');
       // Act
 
       // Assert

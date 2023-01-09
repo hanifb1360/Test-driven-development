@@ -47,7 +47,7 @@ describe('VehicleList component', () => {
         ],
       });
 
-      const vehicles = await screen.findAllByTestId('vehicle-list-item');
+      const vehicles = await screen.findAllByRole('listitem');
       // Act
 
       // Assert

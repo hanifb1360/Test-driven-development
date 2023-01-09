@@ -9,13 +9,14 @@ const UserList = () => {
       .then((data) => setUsers(data));
   }, []);
   return (
-    <section data-testid="user-list-component" className="container">
-      <h1 className="page-title">Our Users</h1>
+    <section
+      data-testid='user-list-component'
+      className='container'
+    >
+      <h1 className='page-title'>Our Users</h1>
       <ul>
         {users.map((user) => (
-          <li key={user.id} data-testid="user-list-item">
-            {user.userName}
-          </li>
+          <li key={user.id}>{user.userName}</li>
         ))}
       </ul>
     </section>
